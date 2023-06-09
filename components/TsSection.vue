@@ -1,0 +1,56 @@
+<template>
+  <section class="section">
+    <img src="" alt="" class="section__flower" v-if="isFlowerVisible" />
+
+    <div class="section__text">
+      <h2 class="section__title">
+        {{ title }}
+      </h2>
+
+      <div class="section__content">
+        <slot />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang="ts">
+export default {
+  name: "TsSection",
+
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+
+    isFlowerVisible: {
+      type: Boolean,
+      default: true,
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.section {
+  padding: 64px 0;
+  background-image: url("~/assets/img/flower.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 16px;
+  background-size: 170px;
+
+  &__title {
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    margin-top: 0;
+  }
+}
+</style>
