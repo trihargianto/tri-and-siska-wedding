@@ -26,6 +26,8 @@ import {
 
 /* add icons to the library */
 library.add(faChevronRight, faChevronLeft, faLocationArrow);
+
+export default {};
 </script>
 
 <style lang="scss" scoped>
