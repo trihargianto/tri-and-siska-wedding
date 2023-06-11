@@ -50,6 +50,7 @@ export default {
   }
 
   &__content {
+    position: relative;
     margin-top: 0;
   }
 }

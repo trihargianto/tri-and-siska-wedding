@@ -1,3 +1,8 @@
+:root {
+  --color-primary: #FFE390;
+  --container-padding: 24px;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;

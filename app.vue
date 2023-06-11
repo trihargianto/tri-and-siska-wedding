@@ -19,11 +19,22 @@
   </div>
 </template>
 
+<script lang="ts">
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
+
+/* add icons to the library */
+library.add(faChevronRight, faChevronLeft);
+</script>
+
 <style lang="scss" scoped>
 .container {
   display: flex;
   justify-content: center;
-  padding: 16px;
+  padding: var(--container-padding);
 
   .app-wrapper {
     width: 360px;
