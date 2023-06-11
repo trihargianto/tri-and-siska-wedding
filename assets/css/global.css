@@ -10,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-// Avoid image exceeding parent width
 img {
   max-width: 100%;
 }
