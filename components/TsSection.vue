@@ -3,7 +3,7 @@
     :class="['section', { 'section--flower-background': isFlowerVisible }]"
   >
     <div class="section__text">
-      <h2 class="section__title">
+      <h2 class="text--heading-2 section__title">
         {{ title }}
       </h2>
 
@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  padding: 64px 0;
+  padding: 54px 0 54px 0;
 
   &--flower-background {
     background-image: url("~/assets/img/flower.png");
@@ -45,9 +45,6 @@ export default {
   }
 
   &__title {
-    font-size: 26px;
-    line-height: 39px;
-    font-weight: 500;
     margin: 0;
     margin-bottom: 32px;
   }

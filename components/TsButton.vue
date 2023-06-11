@@ -24,7 +24,7 @@ export default {
   display: inline-block;
   border: 0;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 14px 20px;
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;

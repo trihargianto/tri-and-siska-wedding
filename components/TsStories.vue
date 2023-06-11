@@ -1,5 +1,9 @@
 <template>
-  <ts-section class="stories" title="Sedikit Kisah Kami">
+  <ts-section
+    class="stories"
+    title="Sedikit Kisah Kami"
+    :is-flower-visible="false"
+  >
     <swiper
       slides-per-view="auto"
       :space-between="30"
@@ -88,8 +92,8 @@ export default {
 
   &__button {
     display: inline-flex;
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
     justify-content: center;
     align-items: center;

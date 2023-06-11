@@ -18,3 +18,21 @@ img {
   font-size: 16px;
   line-height: 1.6;
 }
+
+.text--heading-1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text--heading-2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text--heading-3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}

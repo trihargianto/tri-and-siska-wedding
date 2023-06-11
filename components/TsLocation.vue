@@ -1,24 +1,24 @@
 <template>
   <div class="location">
-    <ts-section title="Lokasi" :is-flower-visible="false">
-      <div class="location__content">
-        <img src="~/assets/img/location-map.png" width="100%" />
+    <h3 class="text--heading-3">Lokasi</h3>
 
-        <div class="location__address">
-          Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank
-          Arum Mandiri Melati <br />
-          <br />
+    <div class="location__content">
+      <img src="~/assets/img/location-map.png" width="100%" />
 
-          <ts-button variant="primary" @click="goToLocationMap">
-            <client-only>
-              <font-awesome-icon icon="fa-solid fa-location-arrow" />
-            </client-only>
+      <div class="location__address">
+        Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank Arum
+        Mandiri Melati <br />
+        <br />
 
-            Buka Maps
-          </ts-button>
-        </div>
+        <ts-button variant="primary" @click="goToLocationMap">
+          <client-only>
+            <font-awesome-icon icon="fa-solid fa-location-arrow" />
+          </client-only>
+
+          Buka Maps
+        </ts-button>
       </div>
-    </ts-section>
+    </div>
   </div>
 </template>
 
@@ -41,6 +41,10 @@ export default {
 
 <style lang="scss" scoped>
 .location {
+  // TODO: avoid negative value here
+  margin-top: -20px;
+  margin-bottom: 48px;
+
   &__content {
     background-color: #f7f5f4;
     padding: 16px;
