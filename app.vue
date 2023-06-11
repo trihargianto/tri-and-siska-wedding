@@ -5,12 +5,9 @@
 
       <ts-stories />
 
-      <ts-section title="Akad">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
-        illo adipisci, repellat quaerat perspiciatis quam dignissimos hic, sit,
-        repellendus reprehenderit facilis quis laborum. Laborum et ipsum quo
-        dolore porro!
-      </ts-section>
+      <ts-event />
+
+      <ts-location />
 
       <ts-section-kind-words />
 
@@ -24,14 +21,16 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faChevronRight,
   faChevronLeft,
+  faLocationArrow,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faChevronRight, faChevronLeft);
+library.add(faChevronRight, faChevronLeft, faLocationArrow);
 </script>
 
 <style lang="scss" scoped>
 .container {
+  background: var(--background-color);
   display: flex;
   justify-content: center;
   padding: var(--container-padding);

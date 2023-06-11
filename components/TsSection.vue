@@ -1,7 +1,7 @@
 <template>
-  <section class="section">
-    <img src="" alt="" class="section__flower" v-if="isFlowerVisible" />
-
+  <section
+    :class="['section', { 'section--flower-background': isFlowerVisible }]"
+  >
     <div class="section__text">
       <h2 class="section__title">
         {{ title }}
@@ -35,11 +35,14 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding: 64px 0;
-  background-image: url("~/assets/img/flower.png");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 16px;
-  background-size: 170px;
+
+  &--flower-background {
+    background-image: url("~/assets/img/flower.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 16px;
+    background-size: 170px;
+  }
 
   &__title {
     font-size: 26px;
