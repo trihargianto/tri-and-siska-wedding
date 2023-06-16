@@ -1,17 +1,7 @@
 <template>
   <div class="container">
     <div class="app-wrapper">
-      <bride-and-groom />
-
-      <ts-stories />
-
-      <ts-event />
-
-      <ts-location />
-
-      <ts-section-kind-words />
-
-      <ts-footer />
+      <nuxt-page />
     </div>
   </div>
 </template>
@@ -22,10 +12,11 @@ import {
   faChevronRight,
   faChevronLeft,
   faLocationArrow,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faChevronRight, faChevronLeft, faLocationArrow);
+library.add(faEnvelope, faChevronRight, faChevronLeft, faLocationArrow);
 
 export default {};
 </script>
@@ -34,6 +25,7 @@ export default {};
 .container {
   background: var(--background-color);
   display: flex;
+  min-height: 100vh;
   justify-content: center;
   padding: var(--container-padding);
 

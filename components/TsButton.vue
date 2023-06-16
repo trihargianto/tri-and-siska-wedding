@@ -28,6 +28,7 @@ export default {
   cursor: pointer;
   font-weight: 400;
   font-size: 16px;
+  color: #242424;
 
   &--primary {
     background-color: var(--color-primary);
