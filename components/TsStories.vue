@@ -15,6 +15,8 @@
         :key="story.title"
         style="margin-right: 30px"
       >
+        <div class="stories__emoji">{{ story.emoji }}</div>
+
         <img
           :src="story.image"
           :alt="story.title"
@@ -82,8 +84,22 @@ export default {
 
 <style lang="scss">
 .stories {
+  position: relative;
+  
   &__image {
     border-radius: 18px;
+  }
+
+  &__emoji {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    background: #fff;
+    border-radius: 50%;
   }
 
   &__title {
