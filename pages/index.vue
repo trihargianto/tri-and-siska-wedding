@@ -23,7 +23,7 @@
 export default {
   data() {
     return {
-      isInvitationOpened: true,
+      isInvitationOpened: false,
     };
   },
 

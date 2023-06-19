@@ -3,7 +3,7 @@
     <h3 class="text--heading-3">Lokasi</h3>
 
     <div class="location__content">
-      <img src="~/assets/img/location-map.png" width="311" height="307" />
+      <img src="~/assets/img/location-map.png" />
 
       <div class="location__address">
         Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank Arum
