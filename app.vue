@@ -27,7 +27,6 @@ export default {};
   display: flex;
   min-height: 100vh;
   justify-content: center;
-  padding: var(--container-padding);
 
   .app-wrapper {
     width: 360px;

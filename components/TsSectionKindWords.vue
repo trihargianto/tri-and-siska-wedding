@@ -1,6 +1,6 @@
 <template>
   <div class="kindwords">
-    <ts-section title="Kalimat Baik">
+    <ts-section title="Kalimat Baik" flower-variant="flower-3">
       <div class="kindwords__content text--body">
         “ بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِى خَيْرٍ”
         <br />

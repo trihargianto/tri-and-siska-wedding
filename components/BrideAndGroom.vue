@@ -24,6 +24,8 @@
 
 <style lang="scss" scoped>
 .bridegroom {
+  margin: 16px;
+  
   &__head {
     display: flex;
     justify-content: flex-start;

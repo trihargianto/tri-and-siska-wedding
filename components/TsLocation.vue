@@ -3,7 +3,7 @@
     <h3 class="text--heading-3">Lokasi</h3>
 
     <div class="location__content">
-      <img src="~/assets/img/location-map.png" width="100%" />
+      <img src="~/assets/img/location-map.png" width="311" height="307" />
 
       <div class="location__address">
         Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank Arum
@@ -41,9 +41,9 @@ export default {
 
 <style lang="scss" scoped>
 .location {
-  // TODO: avoid negative value here
-  margin-top: -20px;
+  margin-top: 38px;
   margin-bottom: 48px;
+  padding: 0 var(--container-padding) 0 var(--container-padding);
 
   &__content {
     background-color: #f7f5f4;

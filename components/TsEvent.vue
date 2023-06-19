@@ -1,6 +1,6 @@
 <template>
   <div class="event">
-    <ts-section title="Acara">
+    <ts-section title="Acara" flower-variant="flower-1">
       <template v-for="event in events" :key="event.name">
         <h3 class="text--heading-3">{{ event.name }}</h3>
 
