@@ -110,8 +110,8 @@ export default {
 
   &__button {
     display: inline-flex;
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
     justify-content: center;
     align-items: center;

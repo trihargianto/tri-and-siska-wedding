@@ -83,7 +83,7 @@ export default {
 
   &__content {
     text-align: center;
-    padding: 16px 38px;
+    padding: 16px 42px;
     background-color: #f7f5f4;
     min-height: 260px;
     display: flex;
@@ -94,8 +94,8 @@ export default {
 
   &__button {
     display: inline-flex;
-    width: 38px;
-    height: 38px;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
     justify-content: center;
     align-items: center;
