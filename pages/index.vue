@@ -1,21 +1,21 @@
 <template>
-  <ts-invitation
+  <section-invitation
     v-if="!isInvitationOpened"
     @click-open-invitation="openInvitation"
   />
 
   <template v-else>
-    <bride-and-groom />
+    <section-bride-and-groom />
 
-    <ts-stories />
+    <section-stories />
 
-    <ts-event />
+    <section-event />
 
-    <ts-location />
+    <section-location />
 
-    <ts-section-kind-words />
+    <section-kind-words />
 
-    <ts-footer />
+    <section-footer />
   </template>
 </template>
 

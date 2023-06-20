@@ -32,7 +32,7 @@ export default {
 
   computed: {
     guest() {
-      return this.getGuestFromQueryParams();
+      return this.getGuestFromQueryParams() || "Guest";
     },
   },
 

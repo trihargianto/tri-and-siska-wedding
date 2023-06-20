@@ -6,7 +6,7 @@
   >
     <swiper
       slides-per-view="auto"
-      :space-between="30"
+      :space-between="20"
       :modules="modules"
       :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
     >

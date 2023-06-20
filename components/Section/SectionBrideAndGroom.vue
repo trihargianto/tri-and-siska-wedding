@@ -8,10 +8,10 @@
 
     <div class="bridegroom__content">
       <img
-        src="~/assets/img/bride-and-groom.svg"
+        src="~/assets/img/bride-and-groom-2.png"
         alt="Bride and Groom"
-        width="240"
-        height="233"
+        width="320"
+        height="320"
         class="bridegroom__img"
       />
 
@@ -42,11 +42,12 @@
   }
 
   &__img {
-    margin: 32px 0;
+    margin: 32px 0 0 0;
     display: inline;
   }
 
   &__heading {
+    margin-top: 12px;
     font-size: 40px;
     line-height: 48px;
     font-weight: 400;

@@ -3,7 +3,11 @@
     <h3 class="text--heading-3">Lokasi</h3>
 
     <div class="location__content">
-      <img src="~/assets/img/location-map.png" />
+      <img
+        src="~/assets/img/location-map.png"
+        class="location__map"
+        @click="goToLocationMap"
+      />
 
       <div class="location__address">
         Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank Arum
@@ -55,6 +59,12 @@ export default {
     text-align: center;
     padding: 16px;
     background-color: #f0eeed;
+  }
+
+  &__map {
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    border: 4px solid #e2e0df;
   }
 }
 </style>
