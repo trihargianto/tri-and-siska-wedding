@@ -1,7 +1,7 @@
 <template>
   <div class="event">
     <ts-section title="Acara" flower-variant="flower-1">
-      <template v-for="event in events" :key="event.name">
+      <div class="event__item" v-for="event in events" :key="event.name">
         <h3 class="text--heading-3">{{ event.name }}</h3>
 
         <div style="text-align: center">
@@ -13,28 +13,31 @@
 
           <p class="text--body">{{ event.description }}</p>
 
-          <div class="event__timer-wrapper">
-            <div class="event__timer">
-              <p class="event__timer-time">{{ daysLeft }}</p>
-              <small class="event__timer-unit">hari</small>
+          <template v-if="event.isCountdownVisible">
+            <div class="event__timer-wrapper">
+              <div class="event__timer">
+                <p class="event__timer-time">{{ daysLeft }}</p>
+                <small class="event__timer-unit">hari</small>
+              </div>
+              <div class="event__timer">
+                <p class="event__timer-time">{{ hoursLeft }}</p>
+                <small class="event__timer-unit">jam</small>
+              </div>
+              <div class="event__timer">
+                <p class="event__timer-time">{{ minutesLeft }}</p>
+                <small class="event__timer-unit">menit</small>
+              </div>
+              <div class="event__timer">
+                <p class="event__timer-time">{{ secondsLeft }}</p>
+                <small class="event__timer-unit">detik</small>
+              </div>
             </div>
-            <div class="event__timer">
-              <p class="event__timer-time">{{ hoursLeft }}</p>
-              <small class="event__timer-unit">jam</small>
-            </div>
-            <div class="event__timer">
-              <p class="event__timer-time">{{ minutesLeft }}</p>
-              <small class="event__timer-unit">menit</small>
-            </div>
-            <div class="event__timer">
-              <p class="event__timer-time">{{ secondsLeft }}</p>
-              <small class="event__timer-unit">detik</small>
-            </div>
-          </div>
 
-          <p>lagi waktu tersisa sampai acara dimulai</p>
+            <p>lagi waktu tersisa sampai acara dimulai</p>
+          </template>
 
           <ts-button
+            v-if="event.isSaveDateButtonVisible"
             variant="primary"
             @click="saveToMyCalendar"
             style="margin-top: 12px"
@@ -43,10 +46,10 @@
               <font-awesome-icon icon="fa-solid fa-location-arrow" />
             </client-only>
 
-            Simpan Tanggal
+            Simpan tanggal {{ event.name }}
           </ts-button>
         </div>
-      </template>
+      </div>
     </ts-section>
   </div>
 </template>
@@ -72,6 +75,15 @@ export default {
 
       events: [
         {
+          name: "Akad Nikah",
+          date: "08 Juli 2023",
+          time: "Sabtu, 10.00 AM - 16.00 PM",
+          shortAddress: "Peniangan, Lampung Timur",
+          description: "",
+          isCountdownVisible: false,
+          isSaveDateButtonVisible: false,
+        },
+        {
           name: "Tasyakuran",
           date: "30 Juli 2023",
           time: "Minggu, 10.00 AM - 16.00 PM",
@@ -79,7 +91,7 @@ export default {
           description:
             "Kami dengan penuh rasa syukur akan mengikat janji suci pernikahan kami. Mohon doa restu dari Anda agar langkah kami dalam membina rumah tangga ini senantiasa diberkahi oleh Allah SWT",
           isCountdownVisible: true,
-          isSafeDateButtonVisible: true,
+          isSaveDateButtonVisible: true,
         },
       ],
     };
@@ -144,6 +156,10 @@ export default {
   &__title {
     margin: 0;
     margin-bottom: 32px;
+  }
+
+  &__item {
+    margin-bottom: 42px;
   }
 
   &__date {
