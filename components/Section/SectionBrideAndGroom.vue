@@ -18,6 +18,8 @@
       <h1 class="bridegroom__heading">
         Tri <span class="bridegroom__ampersand">&</span> Siska
       </h1>
+
+      <p class="text--body">Melaksanakan Pernikahan</p>
     </div>
   </div>
 </template>
@@ -48,6 +50,7 @@
 
   &__heading {
     margin-top: 22px;
+    margin-bottom: 0;
     font-size: 40px;
     line-height: 48px;
     font-weight: 500;
