@@ -2,11 +2,6 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts", "dayjs-nuxt"],
+  modules: ["dayjs-nuxt"],
   css: ["~/assets/css/remedy.css", "~/assets/css/global.css"],
-  googleFonts: {
-    families: {
-      Inter: true,
-    },
-  },
 });
