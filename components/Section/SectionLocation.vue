@@ -58,7 +58,6 @@ export default {
     margin-top: 16px;
     text-align: center;
     padding: 16px;
-    background-color: #f0eeed;
   }
 
   &__map {

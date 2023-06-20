@@ -13,10 +13,19 @@ import {
   faChevronLeft,
   faLocationArrow,
   faEnvelope,
+  faArrowRight,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faEnvelope, faChevronRight, faChevronLeft, faLocationArrow);
+library.add(
+  faArrowRight,
+  faArrowLeft,
+  faEnvelope,
+  faChevronRight,
+  faChevronLeft,
+  faLocationArrow
+);
 
 export default {};
 </script>

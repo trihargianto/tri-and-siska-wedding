@@ -110,8 +110,8 @@ export default {
 
   &__button {
     display: inline-flex;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     font-size: 18px;
     justify-content: center;
     align-items: center;
@@ -128,11 +128,11 @@ export default {
     z-index: 2;
 
     &--prev {
-      left: -12px;
+      left: -16px;
     }
 
     &--next {
-      right: -12px;
+      right: -16px;
     }
   }
 

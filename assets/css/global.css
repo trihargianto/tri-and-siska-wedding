@@ -42,3 +42,7 @@ img {
 .text--align-center {
   text-align: center;
 }
+
+.text--bold {
+  font-weight: 700;
+}
