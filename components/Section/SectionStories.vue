@@ -10,15 +10,11 @@
       :modules="modules"
       :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
     >
-      <swiper-slide
-        v-for="story in stories"
-        :key="story.title"
-        style="margin-right: 30px"
-      >
+      <swiper-slide v-for="story in stories" :key="story.title">
         <div class="stories__emoji">{{ story.emoji }}</div>
 
         <img
-          :src="story.image"
+          :src="getImageUrl(story.image)"
           :alt="story.title"
           width="280"
           height="280"
@@ -79,13 +75,19 @@ export default {
       modules: [Navigation],
     };
   },
+
+  methods: {
+    getImageUrl(imagePath: string) {
+      return new URL(imagePath, import.meta.url).href;
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .stories {
   position: relative;
-  
+
   &__image {
     border-radius: 18px;
   }
