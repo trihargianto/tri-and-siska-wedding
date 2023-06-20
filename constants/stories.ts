@@ -1,7 +1,9 @@
+import { version } from "../package.json";
+
 export const STORIES = [
   {
     key: "story-1",
-    image: "/img/stories/story-date.jpg",
+    image: `/img/stories/story-date.jpg?v=${version}`,
     title: "Awal bertemu",
     emoji: "🤝",
     description:
@@ -9,7 +11,7 @@ export const STORIES = [
   },
   {
     key: "story-2",
-    image: "/img/stories/story-jec.jpg",
+    image: `/img/stories/story-jec.jpg?v=${version}`,
     title: "Pendekatan",
     emoji: "🥰",
     description:
@@ -17,7 +19,7 @@ export const STORIES = [
   },
   {
     key: "story-3",
-    image: "/img/stories/story-kuliah.jpg",
+    image: `/img/stories/story-kuliah.jpg?v=${version}`,
     title: "Menyelesaikan Kuliah",
     emoji: "📖",
     description:
@@ -25,7 +27,7 @@ export const STORIES = [
   },
   {
     key: "story-4",
-    image: "/img/stories/story-subang.jpg",
+    image: `/img/stories/story-subang.jpg?v=${version}`,
     title: "Long Distance Relationship",
     emoji: "✈️",
     description:
@@ -33,7 +35,7 @@ export const STORIES = [
   },
   {
     key: "story-5",
-    image: "/img/stories/story-lamaran.jpeg",
+    image: `/img/stories/story-lamaran.jpeg?v=${version}`,
     title: "Memantapkan Hubungan",
     emoji: "💍",
     description:
