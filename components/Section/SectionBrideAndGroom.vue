@@ -47,10 +47,10 @@
   }
 
   &__heading {
-    margin-top: 12px;
+    margin-top: 22px;
     font-size: 40px;
     line-height: 48px;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   &__ampersand {
