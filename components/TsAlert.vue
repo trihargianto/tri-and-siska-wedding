@@ -21,6 +21,8 @@ export default {
 <style lang="scss" scoped>
 .alert {
   position: fixed;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: rgb(0 0 0 / 70%);
@@ -35,7 +37,8 @@ export default {
     border-radius: 16px;
     padding: 16px 24px;
     margin: auto;
-    width: 80%;
+    width: 500px;
+    max-width: 80%;
     padding: 32px;
   }
 
