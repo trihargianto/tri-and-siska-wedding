@@ -10,7 +10,7 @@
       >
         <swiper-slide v-for="word in kindWords" :key="word.key">
           <div class="kindwords__content text--body">
-            <p>"{{ word.description }}"</p>
+            <p>"{{ word.message }}"</p>
 
             <p class="text--bold" style="margin-top: 6px">{{ word.name }}</p>
           </div>
@@ -47,8 +47,6 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { KIND_WORDS } from "~/constants/kindWords";
-
 export default {
   components: {
     Swiper,
@@ -56,10 +54,11 @@ export default {
     FontAwesomeIcon,
   },
 
-  data() {
-    return {
-      kindWords: KIND_WORDS,
-    };
+  props: {
+    kindWords: {
+      type: Array,
+      required: true,
+    },
   },
 
   setup() {

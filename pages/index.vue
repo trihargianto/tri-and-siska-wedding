@@ -13,17 +13,20 @@
 
     <section-location />
 
-    <section-kind-words />
+    <section-kind-words :kind-words="kindWords" />
 
     <section-footer />
   </template>
 </template>
 
 <script lang="ts">
+import { getGuestBookMessages } from "~/utils/api";
+
 export default {
   data() {
     return {
-      isInvitationOpened: true,
+      kindWords: [],
+      isInvitationOpened: false,
     };
   },
 
@@ -31,6 +34,25 @@ export default {
     openInvitation() {
       this.isInvitationOpened = true;
     },
+
+    async getGuestBookMessages() {
+      const guestBookMessages = await getGuestBookMessages();
+
+      this.kindWords = guestBookMessages?.map((item) => ({
+        key: item.id,
+        name: item.guest.name,
+        message: item.message,
+      }));
+    },
+  },
+
+  async mounted() {
+    this.getGuestBookMessages();
+
+    // const insert = await addNewGuestMessage({
+    //   guestId: 1,
+    //   message: "Hello World",
+    // });
   },
 };
 </script>
