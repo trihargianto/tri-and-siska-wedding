@@ -1,6 +1,12 @@
 <template>
+  <ts-alert v-if="isNonClosableAlertVisible" title="Mohon Maaf">
+    Sepertinya kamu tidak ada di daftar undangan.
+  </ts-alert>
+
   <section-invitation
     v-if="!isInvitationOpened"
+    :guest-name="guestName"
+    :is-validating="isButtonOpenInvitationLoading"
     @click-open-invitation="openInvitation"
   />
 
@@ -13,21 +19,38 @@
 
     <section-location />
 
-    <section-kind-words :kind-words="kindWords" />
+    <section-kind-words :kind-words="kindWords">
+      <section-kind-word-form
+        v-if="!isGuestAlreadySubmittedKindWords"
+        :guest-id="guestId"
+        @on-submit="getGuestBookMessages"
+      />
+    </section-kind-words>
 
     <section-footer />
   </template>
 </template>
 
 <script lang="ts">
-import { getGuestBookMessages } from "~/utils/api";
+import { getGuestBookMessages, getGuestByName } from "~/utils/api";
+import { getGuestNameFromQueryParams } from "~/utils/queryStringHelper";
 
 export default {
   data() {
     return {
       kindWords: [],
+      guestId: 0,
+      guestName: "",
       isInvitationOpened: false,
+      isNonClosableAlertVisible: false,
+      isButtonOpenInvitationLoading: true,
     };
+  },
+
+  computed: {
+    isGuestAlreadySubmittedKindWords() {
+      return this.kindWords.some(({ guest_id }) => guest_id === this.guestId);
+    },
   },
 
   methods: {
@@ -42,17 +65,43 @@ export default {
         key: item.id,
         name: item.guest.name,
         message: item.message,
+        guest_id: item.guest_id,
       }));
+    },
+
+    async getGuestByName(name: string) {
+      const guest = await getGuestByName(name);
+
+      return guest;
+    },
+
+    async checkGuest() {
+      this.isButtonOpenInvitationLoading = true;
+
+      const guestName = getGuestNameFromQueryParams();
+
+      const guest = await this.getGuestByName(guestName);
+
+      if (!guest) {
+        this.showNonClosableAlert();
+        return;
+      }
+
+      this.guestName = guest.name;
+      this.guestId = guest.id;
+
+      this.isButtonOpenInvitationLoading = false;
+    },
+
+    showNonClosableAlert() {
+      this.isNonClosableAlertVisible = true;
     },
   },
 
   async mounted() {
-    this.getGuestBookMessages();
+    await this.getGuestBookMessages();
 
-    // const insert = await addNewGuestMessage({
-    //   guestId: 1,
-    //   message: "Hello World",
-    // });
+    await this.checkGuest();
   },
 };
 </script>

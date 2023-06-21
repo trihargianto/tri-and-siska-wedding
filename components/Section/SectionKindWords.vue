@@ -1,40 +1,44 @@
 <template>
   <div class="kindwords">
     <ts-section title="Kalimat Baik" flower-variant="flower-3">
-      <swiper
-        autoplay
-        slides-per-view="auto"
-        :space-between="20"
-        :modules="modules"
-        :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
-      >
-        <swiper-slide v-for="word in kindWords" :key="word.key">
-          <div class="kindwords__content text--body">
-            <p>"{{ word.message }}"</p>
+      <div class="kindwords__swiper-wrapper">
+        <swiper
+          autoplay
+          slides-per-view="auto"
+          :space-between="20"
+          :modules="modules"
+          :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
+        >
+          <swiper-slide v-for="word in kindWords" :key="word.key">
+            <div class="kindwords__content text--body">
+              <p>"{{ word.message }}"</p>
 
-            <p class="text--bold" style="margin-top: 6px">{{ word.name }}</p>
-          </div>
-        </swiper-slide>
-      </swiper>
+              <p class="text--bold" style="margin-top: 6px">{{ word.name }}</p>
+            </div>
+          </swiper-slide>
+        </swiper>
 
-      <button
-        type="button"
-        id="prevStory"
-        class="kindwords__button kindwords__button--prev"
-      >
-        <client-only>
-          <font-awesome-icon icon="fa-solid fa-arrow-left" />
-        </client-only>
-      </button>
-      <button
-        type="button"
-        id="nextStory"
-        class="kindwords__button kindwords__button--next"
-      >
-        <client-only>
-          <font-awesome-icon icon="fa-solid fa-arrow-right" />
-        </client-only>
-      </button>
+        <button
+          type="button"
+          id="prevStory"
+          class="kindwords__button kindwords__button--prev"
+        >
+          <client-only>
+            <font-awesome-icon icon="fa-solid fa-arrow-left" />
+          </client-only>
+        </button>
+        <button
+          type="button"
+          id="nextStory"
+          class="kindwords__button kindwords__button--next"
+        >
+          <client-only>
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </client-only>
+        </button>
+      </div>
+
+      <slot />
     </ts-section>
   </div>
 </template>
@@ -66,12 +70,6 @@ export default {
       modules: [Navigation],
     };
   },
-
-  methods: {
-    getImageUrl(imagePath: string) {
-      return new URL(imagePath, import.meta.url).href;
-    },
-  },
 };
 </script>
 
@@ -89,6 +87,10 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  &__swiper-wrapper {
+    position: relative;
   }
 
   &__button {

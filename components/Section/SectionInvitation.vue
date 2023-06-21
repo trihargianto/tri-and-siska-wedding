@@ -2,20 +2,29 @@
   <div class="invitation">
     <h1 class="text--heading-1">Tri & Siska</h1>
 
-    <p class="text--body-1">Kepada Yth Bapak/Ibu/Saudara/i</p>
+    <template v-if="!isValidating">
+      <p class="text--body-1">Kepada Yth Bapak/Ibu/Saudara/i</p>
 
-    <p class="text--heading-3" style="margin: 4px 0">{{ guest }}</p>
+      <p class="text--heading-3" style="margin: 4px 0">{{ guestName }}</p>
 
-    <p class="text--body-1">
-      Kami mengundang Anda untuk hadir dalam acara pernikahan kami
-    </p>
+      <p class="text--body-1">
+        Kami mengundang Anda untuk hadir dalam acara pernikahan kami
+      </p>
+    </template>
 
-    <ts-button variant="primary" @click="openInvitation">
-      <client-only>
-        <font-awesome-icon icon="fa-solid fa-envelope" />
-      </client-only>
+    <ts-button
+      variant="primary"
+      @click="openInvitation"
+      :disabled="isValidating"
+    >
+      <template v-if="isValidating">Memvalidasi Undangan...</template>
+      <template v-else>
+        <client-only>
+          <font-awesome-icon icon="fa-solid fa-envelope" />
+        </client-only>
 
-      &nbsp;Buka Undangan
+        &nbsp;Buka Undangan
+      </template>
     </ts-button>
 
     <img src="~/assets/img/flower-1.png" class="invitation__flower" />
@@ -24,30 +33,25 @@
 
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import isRunOnClient from "~/utils/isRunOnClient";
 
 export default {
   components: {
     FontAwesomeIcon,
   },
 
-  computed: {
-    guest() {
-      return this.getGuestFromQueryParams() || "Guest";
+  props: {
+    isValidating: {
+      type: Boolean,
+      default: false,
+    },
+
+    guestName: {
+      type: String,
+      default: "...",
     },
   },
 
   methods: {
-    getGuestFromQueryParams() {
-      if (!isRunOnClient) {
-        return null;
-      }
-
-      const searchParams = new URLSearchParams(window.location.search);
-
-      return searchParams.get("guest");
-    },
-
     openInvitation() {
       this.$emit("click-open-invitation");
     },

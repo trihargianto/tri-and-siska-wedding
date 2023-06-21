@@ -6,7 +6,9 @@ export const getGuestByName = async (name: string) => {
     const { data, error } = await supabaseInstance
       .from(GUEST_TABLE)
       .select("*")
-      .eq("name", name);
+      .eq("name", name)
+      .limit(1)
+      .single();
 
     if (error) {
       throw error;
@@ -20,14 +22,19 @@ export const getGuestByName = async (name: string) => {
 
 export const getGuestBookMessages = async () => {
   try {
-    const { data, error } = await supabaseInstance.from(GUEST_BOOK_TABLE)
-      .select(`
-      id,
-      message,
-      guest (
-        name
+    const { data, error } = await supabaseInstance
+      .from(GUEST_BOOK_TABLE)
+      .select(
+        `
+          id,
+          message,
+          guest_id,
+          guest (
+            name
+          )
+        `
       )
-    `);
+      .order("created_at", { ascending: false });
 
     if (error) {
       throw error;

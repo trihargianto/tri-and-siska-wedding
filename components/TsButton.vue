@@ -1,7 +1,15 @@
 <template>
   <button
     v-bind="$attrs"
-    :class="['button', { 'button--primary': variant === 'primary' }]"
+    :class="[
+      'button',
+      {
+        'button--primary': variant === 'primary',
+        'button--full-width': isFullWidth,
+        'button--disabled': disabled,
+      },
+    ]"
+    :disabled="disabled"
     type="button"
   >
     <slot />
@@ -14,6 +22,16 @@ export default {
     variant: {
       type: String,
       required: true,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+
+    isFullWidth: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -32,6 +50,15 @@ export default {
 
   &--primary {
     background-color: var(--color-primary);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 </style>
