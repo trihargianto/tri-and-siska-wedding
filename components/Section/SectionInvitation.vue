@@ -24,6 +24,7 @@
 
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import isRunOnClient from "~/utils/isRunOnClient";
 
 export default {
   components: {
@@ -38,6 +39,10 @@ export default {
 
   methods: {
     getGuestFromQueryParams() {
+      if (!isRunOnClient) {
+        return null;
+      }
+
       const searchParams = new URLSearchParams(window.location.search);
 
       return searchParams.get("guest");
