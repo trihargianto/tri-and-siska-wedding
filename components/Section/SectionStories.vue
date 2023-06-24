@@ -115,7 +115,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 8px;
+    padding: 6px 12px;
     background: #fff;
     border-radius: 50%;
   }
