@@ -34,6 +34,14 @@ export default defineNuxtConfig({
           content: "Tri & Siska Wedding Invitation - 30 Juli 2023",
         },
         {
+          property: "og:image:width",
+          content: "1200",
+        },
+        {
+          property: "og:image:height",
+          content: "630",
+        },
+        {
           property: "og:image",
           content: `${domain}/tri-siska-banner.jpg`,
         },
