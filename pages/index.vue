@@ -33,7 +33,10 @@
 
 <script lang="ts">
 import { getGuestBookMessages, getGuestByName } from "~/utils/api";
-import { getGuestNameFromQueryParams } from "~/utils/queryStringHelper";
+import {
+  getGuestNameFromQueryParams,
+  isInvitationOpened,
+} from "~/utils/queryStringHelper";
 
 export default {
   data() {
@@ -41,7 +44,7 @@ export default {
       kindWords: [],
       guestId: 0,
       guestName: "",
-      isInvitationOpened: false,
+      isInvitationOpened: isInvitationOpened(),
       isNonClosableAlertVisible: false,
       isButtonOpenInvitationLoading: true,
     };
@@ -56,6 +59,10 @@ export default {
   methods: {
     openInvitation() {
       this.isInvitationOpened = true;
+
+      this.$router.push({
+        query: { guest: getGuestNameFromQueryParams(), opened: "1" },
+      });
     },
 
     async getGuestBookMessages() {

@@ -20,7 +20,7 @@
         @click="openInvitation"
         :disabled="isValidating"
       >
-        <template v-if="isValidating">Memvalidasi Undangan...</template>
+        <template v-if="isValidating">{{ t("validating") }}</template>
         <template v-else>
           <client-only>
             <font-awesome-icon icon="fa-solid fa-envelope" />
@@ -40,12 +40,14 @@
   "id": {
     "dear": "Kepada Yth Bapak/Ibu/Saudara/i",
     "invitationText": "Kami mengundang Anda untuk hadir dalam acara pernikahan kami",
-    "openInvitation": "Buka Undangan"
+    "openInvitation": "Buka Undangan",
+    "validating": "Memvalidasi Undangan..."
   },
   "en": {
     "dear": "Dear,",
     "invitationText": "We invite you to attend our wedding",
-    "openInvitation": "Open Invitation"
+    "openInvitation": "Open Invitation",
+    "validating": "Validating Invitation..."
   }
 }
 </i18n>
