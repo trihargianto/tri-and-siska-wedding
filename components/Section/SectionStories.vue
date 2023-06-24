@@ -1,9 +1,12 @@
 <template>
   <ts-section
     class="stories"
-    title="Sedikit Kisah Kami"
+    :title="t('storyTitle')"
     :is-flower-visible="false"
   >
+    <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+    <nuxt-link :to="switchLocalePath('id')">Indonesia</nuxt-link>
+
     <swiper
       slides-per-view="auto"
       :space-between="20"
@@ -48,6 +51,17 @@
   </ts-section>
 </template>
 
+<i18n lang="json">
+{
+  "id": {
+    "storyTitle": "Sedikit Kisah Kami"
+  },
+  "en": {
+    "storyTitle": "Our Story"
+  }
+}
+</i18n>
+
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -71,8 +85,13 @@ export default {
   },
 
   setup() {
+    const switchLocalePath = useSwitchLocalePath();
+    const { t } = useI18n();
+
     return {
       modules: [Navigation],
+      switchLocalePath,
+      t,
     };
   },
 
