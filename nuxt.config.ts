@@ -71,10 +71,6 @@ export default defineNuxtConfig({
   },
   ssr: true,
   devtools: { enabled: true },
-  modules: ["dayjs-nuxt", "@nuxtjs/i18n"],
+  modules: ["dayjs-nuxt"],
   css: ["~/assets/css/remedy.css", "~/assets/css/global.css"],
-  i18n: {
-    locales: ["en", "id"],
-    defaultLocale: "id",
-  },
 });
