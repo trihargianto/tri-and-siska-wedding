@@ -6,10 +6,6 @@
   --container-padding: 24px;
 }
 
-html, body, #__nuxt {
-  height: 100%;
-}
-
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;

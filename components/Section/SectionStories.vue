@@ -1,7 +1,7 @@
 <template>
   <ts-section
     class="stories"
-    :title="t('storyTitle')"
+    title="Sedikit Kisah Kami"
     :is-flower-visible="false"
   >
     <swiper
@@ -48,17 +48,6 @@
   </ts-section>
 </template>
 
-<i18n lang="json">
-{
-  "id": {
-    "storyTitle": "Sedikit Kisah Kami"
-  },
-  "en": {
-    "storyTitle": "Our Story"
-  }
-}
-</i18n>
-
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -82,13 +71,8 @@ export default {
   },
 
   setup() {
-    const switchLocalePath = useSwitchLocalePath();
-    const { t } = useI18n();
-
     return {
       modules: [Navigation],
-      switchLocalePath,
-      t,
     };
   },
 
