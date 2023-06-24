@@ -115,9 +115,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 12px;
     background: #fff;
     border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
   }
 
   &__title {

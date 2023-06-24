@@ -24,7 +24,7 @@ export const STORIES = [
     description(lang: string) {
       return lang === "id"
         ? "Setelah makin mengenal satu sama lain, Tri mengungkapkan perasaannya kepada Siska di tahun 2017. Setelah beberapa waktu, Siska akhirnya menjawab perasaan Tri dan mereka resmi menjalin hubungan."
-        : "After getting to know each other more, Tri expressed his feelings to Siska in 2017. After a while, Siska finally answered Tri's feelings and they officially started a relationship.";
+        : "After getting to know each other more, Tri confess his feelings to Siska in 2017. After a while, Siska finally answered and they officially started a relationship.";
     },
   },
   {
@@ -37,7 +37,7 @@ export const STORIES = [
     description(lang: string) {
       return lang === "id"
         ? "Karena berada di angkatan yang sama, kami sama-sama berusaha menyelesaikan kuliah bersamaan supaya bisa mengejar mimpi bersama. Alhamdulillah, kami berhasil menyelesaikan kuliah di tahun 2018."
-        : "Because we were in the same class, we both tried to finish college at the same time so that we could pursue our dreams together. Alhamdulillah, we managed to finish college in 2018.";
+        : "Because we were in the same class, we both tried to graduate at the same time so that we could pursue our dreams together. Alhamdulillah, we both managed to graduate in 2018.";
     },
   },
   {
@@ -51,8 +51,8 @@ export const STORIES = [
     },
     description(lang: string) {
       return lang === "id"
-        ? "Setelah menyelesaikan studi, Siska memutuskan untuk kembali ke kampung halamannya di Lampung dan kami menjalani hubungan jarak jauh selama 4 tahun di beberapa tempat yang berbeda. Meski begitu, kami sesekali bertemu di Yogyakarta, Subang dan Jakarta."
-        : "After finishing his studies, Siska decided to return to his hometown in Lampung and we had a long distance relationship for 4 years in several different places. Even so, we occasionally met in Yogyakarta, Subang and Jakarta.";
+        ? "Setelah menyelesaikan studi, Siska memutuskan untuk kembali ke kampung halamannya di Lampung dan kami menjalani hubungan jarak jauh selama 4 tahun di beberapa tempat yang berbeda. Meski begitu, kami sesekali bertemu di Yogyakarta, Subang, dan Jakarta."
+        : "After finishing our studies, Siska decided to return to his hometown in Lampung and we had a long distance relationship for 4 years in several different places. Even so, we occasionally met in Yogyakarta, Subang, and Jakarta.";
     },
   },
   {
@@ -64,8 +64,8 @@ export const STORIES = [
     },
     description(lang: string) {
       return lang === "id"
-        ? "Kami menjaga hubungan jarak jauh kami antara Jakarta, Subang, Jogja dan Lampung. Bulan Januari 2023 lalu kami telah melaksanakan Lamaran, dan sekarang kami siap untuk memulai hidup bersama sampai maut memisahkan. Amiinn 🙏"
-        : "We maintain our long distance relationship between Jakarta, Subang, Jogja and Lampung. Last January 2023 we have carried out the Engagement, and now we are ready to start a life together until death separates. Amiinn 🙏";
+        ? "Kami menjaga hubungan jarak jauh kami antara Jakarta, Subang, Jogja, dan Lampung. Bulan Januari 2023 lalu kami telah melaksanakan Lamaran, dan sekarang kami siap untuk memulai hidup bersama sampai maut memisahkan. Amiinn 🙏"
+        : "We maintain our long distance relationship between Jakarta, Subang, Jogja, and Lampung. Last January 2023 we have carried out the Engagement, and now we are ready to start a life together until death separates. Amiinn 🙏";
     },
   },
 ];
