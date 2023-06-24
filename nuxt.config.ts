@@ -35,15 +35,15 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image:width",
-          content: "1200",
+          content: "500",
         },
         {
           property: "og:image:height",
-          content: "630",
+          content: "500",
         },
         {
           property: "og:image",
-          content: `${domain}/tri-siska-banner.jpg`,
+          content: "/tri-siska-banner.jpg",
         },
         // Twitter
         {
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: `${domain}/tri-siska-banner.jpg`,
+          content: "/tri-siska-banner.jpg",
         },
       ],
     },
