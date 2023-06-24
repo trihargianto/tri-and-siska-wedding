@@ -9,13 +9,19 @@
     <div class="bridegroom__content">
       <ts-language-switcher />
 
-      <img
-        src="~/assets/img/bride-and-groom-2.png"
-        alt="Bride and Groom"
-        width="320"
-        height="320"
-        class="bridegroom__img"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="~/assets/img/bride-and-groom-2.webp"
+        />
+        <img
+          src="~/assets/img/bride-and-groom-2.png"
+          alt="Bride and Groom"
+          width="320"
+          height="320"
+          class="bridegroom__img"
+        />
+      </picture>
 
       <h1 class="bridegroom__heading">
         Tri <span class="bridegroom__ampersand">&</span> Siska

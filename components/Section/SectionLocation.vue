@@ -3,11 +3,15 @@
     <h3 class="text--heading-3">{{ t("location") }}</h3>
 
     <div class="location__content">
-      <img
-        src="~/assets/img/location-map.png"
-        class="location__map"
-        @click="goToLocationMap"
-      />
+      <picture>
+        <source type="image/webp" srcset="~/assets/img/location-map.webp" />
+        <img
+          src="~/assets/img/location-map.png"
+          class="location__map"
+          loading="lazy"
+          @click="goToLocationMap"
+        />
+      </picture>
 
       <div class="location__address">
         Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11<br />
@@ -63,7 +67,6 @@ export default {
 
 <style lang="scss" scoped>
 .location {
-  margin-top: 38px;
   margin-bottom: 48px;
   padding: 0 var(--container-padding) 0 var(--container-padding);
 
@@ -79,6 +82,7 @@ export default {
   }
 
   &__map {
+    cursor: pointer;
     aspect-ratio: 1/1;
     border-radius: 16px;
     border: 4px solid #e2e0df;

@@ -13,13 +13,17 @@
       <swiper-slide v-for="story in stories" :key="story.title">
         <div class="stories__emoji">{{ story.emoji }}</div>
 
-        <img
-          :src="story.image"
-          :alt="story.title(selectedLocale)"
-          width="280"
-          height="280"
-          class="stories__image"
-        />
+        <picture>
+          <source type="image/webp" :srcset="story.imageWebp" />
+          <img
+            :src="story.imageJpg"
+            :alt="story.title(selectedLocale)"
+            width="280"
+            height="280"
+            class="stories__image"
+            loading="lazy"
+          />
+        </picture>
 
         <h3 class="text--body">{{ story.title(selectedLocale) }}</h3>
 

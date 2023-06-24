@@ -3,7 +3,8 @@ import { version } from "../package.json";
 export const STORIES = [
   {
     key: "story-1",
-    image: `/wedding-invitation/img/stories/story-date.jpg?v=${version}`,
+    imageWebp: `/wedding-invitation/img/stories/story-date.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-date.jpg?v=${version}`,
     emoji: "🤝",
     title(lang: string) {
       return lang === "id" ? "Awal bertemu" : "First Meet";
@@ -16,7 +17,8 @@ export const STORIES = [
   },
   {
     key: "story-2",
-    image: `/wedding-invitation/img/stories/story-jec.jpg?v=${version}`,
+    imageWebp: `/wedding-invitation/img/stories/story-jec.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-jec.jpg?v=${version}`,
     emoji: "🥰",
     title(lang: string) {
       return lang === "id" ? "Pendekatan" : "Get to know each other";
@@ -29,7 +31,8 @@ export const STORIES = [
   },
   {
     key: "story-3",
-    image: `/wedding-invitation/img/stories/story-kuliah.jpg?v=${version}`,
+    imageWebp: `/wedding-invitation/img/stories/story-kuliah.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-kuliah.jpg?v=${version}`,
     emoji: "📖",
     title(lang: string) {
       return lang === "id" ? "Menyelesaikan Kuliah" : "Graduation";
@@ -42,7 +45,8 @@ export const STORIES = [
   },
   {
     key: "story-4",
-    image: `/wedding-invitation/img/stories/story-subang.jpg?v=${version}`,
+    imageWebp: `/wedding-invitation/img/stories/story-subang.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-subang.jpg?v=${version}`,
     emoji: "✈️",
     title(lang: string) {
       return lang === "id"
@@ -57,7 +61,8 @@ export const STORIES = [
   },
   {
     key: "story-5",
-    image: `/wedding-invitation/img/stories/story-lamaran.jpeg?v=${version}`,
+    imageWebp: `/wedding-invitation/img/stories/story-lamaran.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-lamaran.jpeg?v=${version}`,
     emoji: "💍",
     title(lang: string) {
       return lang === "id" ? "Memantapkan Hubungan" : "Engagement";
