@@ -10,7 +10,7 @@
       :modules="modules"
       :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
     >
-      <swiper-slide v-for="story in stories" :key="story.title">
+      <swiper-slide v-for="(story, index) in stories" :key="story.title">
         <div class="stories__emoji">{{ story.emoji }}</div>
 
         <picture>
@@ -21,7 +21,7 @@
             width="280"
             height="280"
             class="stories__image"
-            loading="lazy"
+            :loading="index === 0 || index === 1 ? 'eager' : 'lazy'"
           />
         </picture>
 
