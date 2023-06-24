@@ -36,14 +36,14 @@ export default {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 10px;
+    padding: 10px 14px;
     border-radius: 12px;
     border: 1px solid #e8edf1;
     position: absolute;
     right: 16px;
     top: 16px;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
   }
 }
