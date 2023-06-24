@@ -36,7 +36,7 @@ export default {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 10px 14px;
+    padding: 10px;
     border-radius: 12px;
     border: 1px solid #e8edf1;
     position: absolute;
@@ -45,6 +45,7 @@ export default {
     margin: 0;
     font-size: 1.1rem;
     text-align: center;
+    color: #454545;
   }
 }
 </style>
