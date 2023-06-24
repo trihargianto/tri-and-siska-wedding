@@ -1,6 +1,6 @@
 <template>
   <div class="kindwords">
-    <ts-section title="Kalimat Baik" flower-variant="flower-3">
+    <ts-section :title="t('kindWord')" flower-variant="flower-3">
       <div class="kindwords__swiper-wrapper">
         <swiper
           autoplay
@@ -43,6 +43,17 @@
   </div>
 </template>
 
+<i18n lang="json">
+{
+  "id": {
+    "kindWord": "Kalimat Baik"
+  },
+  "en": {
+    "kindWord": "Kind Words"
+  }
+}
+</i18n>
+
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -66,8 +77,11 @@ export default {
   },
 
   setup() {
+    const { t } = useI18n();
+
     return {
       modules: [Navigation],
+      t,
     };
   },
 };

@@ -8,7 +8,7 @@
 
     <div class="bridegroom__content">
       <ts-language-switcher />
-      
+
       <img
         src="~/assets/img/bride-and-groom-2.png"
         alt="Bride and Groom"
@@ -21,15 +21,36 @@
         Tri <span class="bridegroom__ampersand">&</span> Siska
       </h1>
 
-      <p class="text--body">Melaksanakan Pernikahan</p>
+      <p class="text--body">{{ t("areMarried") }}</p>
     </div>
   </div>
 </template>
 
+<i18n lang="json">
+{
+  "id": {
+    "areMarried": "Melaksanakan Pernikahan"
+  },
+  "en": {
+    "areMarried": "Are Getting Married"
+  }
+}
+</i18n>
+
+<script lang="ts">
+export default {
+  setup() {
+    const { t } = useI18n();
+
+    return { t };
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 .bridegroom {
   margin: 16px;
-  
+
   &__head {
     display: flex;
     justify-content: flex-start;

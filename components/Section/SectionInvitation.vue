@@ -88,7 +88,7 @@ export default {
 .invitation {
   height: 100%;
   padding: 16px;
-  
+
   &__inner {
     background-image: url("~/assets/img/ellipse-blur.svg");
     background-repeat: no-repeat;

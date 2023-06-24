@@ -1,12 +1,8 @@
 <template>
   <div class="langswitch">
-    <select
-      class="langswitch__select"
-      :value="currentLocale"
-      @input="switchLanguage"
-    >
-      <option value="en">EN</option>
+    <select class="langswitch__select" v-model="selectedLocale">
       <option value="id">ID</option>
+      <option value="en">EN</option>
     </select>
   </div>
 </template>
@@ -22,17 +18,13 @@ export default {
   },
 
   computed: {
-    currentLocale() {
-      return this.$i18n.locale;
-    },
-  },
-
-  methods: {
-    switchLanguage(event: Event) {
-      const target = event.target as HTMLSelectElement;
-      const locale = target.value;
-
-      this.$router.push(this.switchLocalePath(locale));
+    selectedLocale: {
+      set(locale: string) {
+        this.$router.push(this.switchLocalePath(locale));
+      },
+      get() {
+        return this.$i18n.locale;
+      },
     },
   },
 };

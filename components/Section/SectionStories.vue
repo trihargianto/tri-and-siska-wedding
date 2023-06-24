@@ -14,16 +14,16 @@
         <div class="stories__emoji">{{ story.emoji }}</div>
 
         <img
-          :src="getImageUrl(story.image)"
-          :alt="story.title"
+          :src="story.image"
+          :alt="story.title(selectedLocale)"
           width="280"
           height="280"
           class="stories__image"
         />
 
-        <h3 class="text--body">{{ story.title }}</h3>
+        <h3 class="text--body">{{ story.title(selectedLocale) }}</h3>
 
-        <p class="text--body">{{ story.description }}</p>
+        <p class="text--body">{{ story.description(selectedLocale) }}</p>
       </swiper-slide>
     </swiper>
 
@@ -92,9 +92,9 @@ export default {
     };
   },
 
-  methods: {
-    getImageUrl(imagePath: string) {
-      return new URL(imagePath, import.meta.url).href;
+  computed: {
+    selectedLocale() {
+      return this.$i18n.locale;
     },
   },
 };
