@@ -1,7 +1,7 @@
 <template>
   <ts-section
     class="stories"
-    title="Sedikit Kisah Kami"
+    :title="t('storyTitle')"
     :is-flower-visible="false"
   >
     <swiper
@@ -14,16 +14,16 @@
         <div class="stories__emoji">{{ story.emoji }}</div>
 
         <img
-          :src="getImageUrl(story.image)"
-          :alt="story.title"
+          :src="story.image"
+          :alt="story.title(selectedLocale)"
           width="280"
           height="280"
           class="stories__image"
         />
 
-        <h3 class="text--body">{{ story.title }}</h3>
+        <h3 class="text--body">{{ story.title(selectedLocale) }}</h3>
 
-        <p class="text--body">{{ story.description }}</p>
+        <p class="text--body">{{ story.description(selectedLocale) }}</p>
       </swiper-slide>
     </swiper>
 
@@ -48,6 +48,17 @@
   </ts-section>
 </template>
 
+<i18n lang="json">
+{
+  "id": {
+    "storyTitle": "Sedikit Kisah Kami"
+  },
+  "en": {
+    "storyTitle": "Our Story"
+  }
+}
+</i18n>
+
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -71,14 +82,19 @@ export default {
   },
 
   setup() {
+    const switchLocalePath = useSwitchLocalePath();
+    const { t } = useI18n();
+
     return {
       modules: [Navigation],
+      switchLocalePath,
+      t,
     };
   },
 
-  methods: {
-    getImageUrl(imagePath: string) {
-      return new URL(imagePath, import.meta.url).href;
+  computed: {
+    selectedLocale() {
+      return this.$i18n.locale;
     },
   },
 };

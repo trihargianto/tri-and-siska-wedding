@@ -1,6 +1,6 @@
 <template>
   <div class="location">
-    <h3 class="text--heading-3">Lokasi</h3>
+    <h3 class="text--heading-3">{{ t("location") }}</h3>
 
     <div class="location__content">
       <img
@@ -10,8 +10,7 @@
       />
 
       <div class="location__address">
-        Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11 Samping Bank Arum
-        Mandiri Melati <br />
+        Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11<br />
         <br />
 
         <ts-button variant="primary" @click="goToLocationMap">
@@ -19,12 +18,25 @@
             <font-awesome-icon icon="fa-solid fa-location-arrow" />
           </client-only>
 
-          Buka Maps
+          {{ t("openMap") }}
         </ts-button>
       </div>
     </div>
   </div>
 </template>
+
+<i18n lang="json">
+{
+  "id": {
+    "location": "Lokasi",
+    "openMap": "Buka Google Maps"
+  },
+  "en": {
+    "location": "Location",
+    "openMap": "Open Google Maps"
+  }
+}
+</i18n>
 
 <script lang="ts">
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -39,6 +51,12 @@ export default {
     goToLocationMap() {
       window.open(MAP_LOCATION, "_blank", "noopener");
     },
+  },
+
+  setup() {
+    const { t } = useI18n();
+
+    return { t };
   },
 };
 </script>

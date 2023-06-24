@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -21,6 +22,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@nuxtjs/i18n": "^8.0.0-beta.12",
     "@nuxtjs/google-fonts": "^3.0.1",
     "@supabase/supabase-js": "^2.26.0",
     "dayjs-nuxt": "^1.1.2",

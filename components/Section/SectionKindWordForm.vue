@@ -4,7 +4,7 @@
       <div class="wordform__form">
         <textarea
           v-model="message"
-          placeholder="Berikan kalimat baik versimu.."
+          :placeholder="t('placeholder')"
           class="wordform__textarea"
           @input="updateCharacterCount"
         />
@@ -19,11 +19,26 @@
         :disabled="isSubmitting"
         @click="submitForm"
       >
-        {{ isSubmitting ? "Mengirim..." : "Kirim" }}
+        {{ isSubmitting ? t("sending") : t("send") }}
       </ts-button>
     </form>
   </div>
 </template>
+
+<i18n lang="json">
+{
+  "id": {
+    "send": "Kirim",
+    "sending": "Mengirim...",
+    "placeholder": "Berikan kalimat baik versimu.."
+  },
+  "en": {
+    "send": "Send",
+    "sending": "Sending...",
+    "placeholder": "Give your kind words.."
+  }
+}
+</i18n>
 
 <script lang="ts">
 import { addNewGuestMessage } from "~/utils/api";
@@ -48,6 +63,12 @@ export default {
     totalTypedCharacters() {
       return this.message.length;
     },
+  },
+
+  setup() {
+    const { t } = useI18n();
+
+    return { t };
   },
 
   methods: {
