@@ -7,7 +7,7 @@
           slides-per-view="auto"
           :space-between="20"
           :modules="modules"
-          :navigation="{ prevEl: '#prevStory', nextEl: '#nextStory' }"
+          :navigation="{ prevEl: '#prevKindWord', nextEl: '#nextKindWord' }"
         >
           <swiper-slide v-for="word in kindWords" :key="word.key">
             <div class="kindwords__content text--body">
@@ -20,7 +20,7 @@
 
         <button
           type="button"
-          id="prevStory"
+          id="prevKindWord"
           class="kindwords__button kindwords__button--prev"
         >
           <client-only>
@@ -29,7 +29,7 @@
         </button>
         <button
           type="button"
-          id="nextStory"
+          id="nextKindWord"
           class="kindwords__button kindwords__button--next"
         >
           <client-only>
