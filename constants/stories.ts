@@ -7,7 +7,7 @@ export const STORIES = [
     title: "Awal bertemu",
     emoji: "🤝",
     description:
-      "Kami bertemu pertama kali di STMIK AKAKOM Yogyakarta di tahun 2015. Waktu itu kami sering bertemu di organisasi kampus. Meski begitu, cara berkenalan kami justru melalui media sosial dan saling bertukar pesan di Line.",
+      "Kami bertemu pertama kali di STMIK AKAKOM Yogyakarta di tahun 2016. Waktu itu kami sering bertemu di organisasi kampus. Meski begitu, cara berkenalan kami justru melalui media sosial dan saling bertukar pesan di Line.",
   },
   {
     key: "story-2",
@@ -15,7 +15,7 @@ export const STORIES = [
     title: "Pendekatan",
     emoji: "🥰",
     description:
-      "Setelah makin mengenal satu sama lain, Tri mengungkapkan perasaannya kepada Siska di tahun 2017. Setelah beberapa waktu, Siska akhirnya menjawab perasaan Tri dan mereka resmi berpacaran.",
+      "Setelah makin mengenal satu sama lain, Tri mengungkapkan perasaannya kepada Siska di tahun 2017. Setelah beberapa waktu, Siska akhirnya menjawab perasaan Tri dan mereka resmi menjalin hubungan.",
   },
   {
     key: "story-3",
@@ -31,7 +31,7 @@ export const STORIES = [
     title: "Long Distance Relationship",
     emoji: "✈️",
     description:
-      "Setelah menyelesaikan studi, Siska memutuskan untuk kembali ke kampung halamannya di Lampung dan menjalani hubungan jarak jauh selama 4 tahun. Meski begitu, kami sesekali bertemu di Yogyakarta dan Jakarta.",
+      "Setelah menyelesaikan studi, Siska memutuskan untuk kembali ke kampung halamannya di Lampung dan kami menjalani hubungan jarak jauh selama 4 tahun di beberapa tempat yang berbeda. Meski begitu, kami sesekali bertemu di Yogyakarta, Subang dan Jakarta.",
   },
   {
     key: "story-5",
@@ -39,6 +39,6 @@ export const STORIES = [
     title: "Memantapkan Hubungan",
     emoji: "💍",
     description:
-      "Kami menjaga hubungan jarak jauh kami antara Jakarta, Jogja dan Lampung. Bulan Desember 2022 lalu kami telah melaksanakan Lamaran, dan sekarang kami siap untuk memulai hidup bersama sampai maut memisahkan. Amiinn 🙏",
+      "Kami menjaga hubungan jarak jauh kami antara Jakarta, Subang, Jogja dan Lampung. Bulan Januari 2023 lalu kami telah melaksanakan Lamaran, dan sekarang kami siap untuk memulai hidup bersama sampai maut memisahkan. Amiinn 🙏",
   },
 ];
