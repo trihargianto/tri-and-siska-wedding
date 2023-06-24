@@ -4,9 +4,6 @@
     :title="t('storyTitle')"
     :is-flower-visible="false"
   >
-    <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
-    <nuxt-link :to="switchLocalePath('id')">Indonesia</nuxt-link>
-
     <swiper
       slides-per-view="auto"
       :space-between="20"

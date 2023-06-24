@@ -7,6 +7,8 @@
     </div>
 
     <div class="bridegroom__content">
+      <ts-language-switcher />
+      
       <img
         src="~/assets/img/bride-and-groom-2.png"
         alt="Bride and Groom"
@@ -37,6 +39,7 @@
   }
 
   &__content {
+    position: relative;
     border: 1px solid #f0eeed;
     border-radius: 0px 0px 16px 16px;
     text-align: center;
