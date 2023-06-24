@@ -34,7 +34,7 @@ export default {};
 .container {
   background: var(--background-color);
   display: flex;
-  min-height: 100vh;
+  height: 100%;
   justify-content: center;
 
   .app-wrapper {
