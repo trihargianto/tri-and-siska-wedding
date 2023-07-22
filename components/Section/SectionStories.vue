@@ -55,10 +55,10 @@
 <i18n lang="json">
 {
   "id": {
-    "storyTitle": "Sedikit Kisah Kami"
+    "storyTitle": "Sedikit Kisah Kami 📖"
   },
   "en": {
-    "storyTitle": "Our Story"
+    "storyTitle": "Our Story 📖"
   }
 }
 </i18n>

@@ -46,10 +46,10 @@
 <i18n lang="json">
 {
   "id": {
-    "kindWord": "Kalimat Baik"
+    "kindWord": "Kalimat Baik 😊"
   },
   "en": {
-    "kindWord": "Kind Words"
+    "kindWord": "Kind Words 😊"
   }
 }
 </i18n>

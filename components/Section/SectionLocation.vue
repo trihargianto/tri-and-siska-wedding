@@ -14,7 +14,8 @@
       </picture>
 
       <div class="location__address">
-        Nitikan Timur, Semanu, Semanu, Gunungkidul RT 06 RW 11<br />
+        Nitikan Timur RT 06 RW 11, Semanu, Semanu, Gunungkidul,
+        D.I.Yogyakarta<br />
         <br />
 
         <ts-button variant="primary" @click="goToLocationMap">

@@ -57,7 +57,7 @@
 <i18n lang="json">
 {
   "id": {
-    "events": "Acara",
+    "events": "Acara 🗓️",
     "saveTheDate": "Simpan tanggal",
     "timeLeft": "lagi waktu tersisa sampai acara dimulai",
     "days": "hari",
@@ -66,7 +66,7 @@
     "seconds": "detik"
   },
   "en": {
-    "events": "Events",
+    "events": "Events 🗓️",
     "saveTheDate": "Save the date",
     "timeLeft": "left until the event starts",
     "days": "days",

@@ -73,4 +73,18 @@ export const STORIES = [
         : "We maintain our long distance relationship between Jakarta, Subang, Jogja, and Lampung. Last January 2023 we have carried out the Engagement, and now we are ready to start a life together until death separates. Amiinn 🙏";
     },
   },
+  {
+    key: "story-6",
+    imageWebp: `/wedding-invitation/img/stories/story-married.webp?v=${version}`,
+    imageJpg: `/wedding-invitation/img/stories/story-married.jpeg?v=${version}`,
+    emoji: "💍",
+    title(lang: string) {
+      return lang === "id" ? "Akad Nikah" : "Marriage";
+    },
+    description(lang: string) {
+      return lang === "id"
+        ? "Kami melaksanakan akad nikah pada tanggal 08 Juli 2023 di Desa Peniangan, Kecamatan Marga Sekampung, Lampung Timur. Pernikahan kami berlangsung secara sederhana dan dihadiri oleh keluarga dan kerabat terdekat."
+        : "We held the marriage on July 08, 2023 in Peniangan, Marga Sekampung, East Lampung. Our marriage took place simply and was attended by family and close relatives.";
+    },
+  },
 ];

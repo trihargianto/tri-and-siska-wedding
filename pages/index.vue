@@ -27,6 +27,8 @@
       />
     </section-kind-words>
 
+    <section-gift />
+
     <section-footer />
   </template>
 </template>
