@@ -121,7 +121,7 @@ export default {
           {
             name: "Akad Nikah",
             date: "08 Juli 2023",
-            time: "Saturday, 10.00 AM - 16.00 PM",
+            time: "Saturday, 10.00 AM - 12.00 PM",
             shortAddress: "Peniangan, Lampung Timur",
             description: "",
             isCountdownVisible: false,
@@ -130,7 +130,7 @@ export default {
           {
             name: "Tasyakuran",
             date: "30 Juli 2023",
-            time: "Minggu, 10.00 AM - 16.00 PM",
+            time: "Minggu, 10.00 AM - Selesai",
             shortAddress: "Gunungkidul, D.I.Yogyakarta",
             description:
               "Kami dengan penuh rasa syukur akan mengikat janji suci pernikahan kami. Mohon doa restu dari Anda agar langkah kami dalam membina rumah tangga ini senantiasa diberkahi oleh Allah SWT",
@@ -144,7 +144,7 @@ export default {
         {
           name: "Akad Nikah",
           date: "08 July 2023",
-          time: "Saturday, 10.00 AM - 16.00 PM",
+          time: "Saturday, 10.00 AM - 12.00 PM",
           shortAddress: "Peniangan, East Lampung",
           description: "",
           isCountdownVisible: false,
@@ -153,7 +153,7 @@ export default {
         {
           name: "Tasyakuran",
           date: "30 July 2023",
-          time: "Sunday, 10.00 AM - 16.00 PM",
+          time: "Sunday, 10.00 AM - Selesai",
           shortAddress: "Gunungkidul, D.I.Yogyakarta",
           description:
             "We are grateful to be able to bind our sacred marriage vows. We ask for your prayers and blessings so that our steps in building this household will always be blessed by Allah SWT",
