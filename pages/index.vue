@@ -79,7 +79,8 @@ export default {
     },
 
     async getGuestByName(name: string) {
-      const guest = await getGuestByName(name);
+      const removedDashChars = name.replace(/-/g, " ");
+      const guest = await getGuestByName(removedDashChars);
 
       return guest;
     },
