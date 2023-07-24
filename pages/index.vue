@@ -93,12 +93,14 @@ export default {
       const guest = await this.getGuestByName(guestName);
 
       if (!guest) {
-        this.showNonClosableAlert();
-        return;
+        // this.showNonClosableAlert();
+        // return;
+        this.guestName = "Tamu Umum";
+        this.guestId = 1;
+      } else {
+        this.guestName = guest.name;
+        this.guestId = guest.id;
       }
-
-      this.guestName = guest.name;
-      this.guestId = guest.id;
 
       this.isButtonOpenInvitationLoading = false;
     },
